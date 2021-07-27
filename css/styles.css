@@ -14,8 +14,10 @@ Background Color (Green): #357b70;
   --line-height: 1.7;
 }
 :root {
- --primary-color : #357b70 ;
+ --box-primary-background : #357b70 ;
+ --box-primary-color: #fff;
  --box-secondary-background:#6c115f;
+ --box-secondary-color: #000;
 }
   body {
   font-family: 'Libre Baskerville', sans-serif;

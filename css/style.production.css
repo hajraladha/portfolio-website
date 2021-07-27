@@ -1,4 +1,11 @@
 /*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version
+*/
+
+./*
 Colors used
 
 Text Color (Grey): #91b5b6;
@@ -78,7 +85,7 @@ Background Color (Green): #357b70;
   /* reduces the opacity of the button to 80% */
   opacity: 0.8;
   }
-  *{ box-sizing: border-box; }
+  *{ -webkit-box-sizing: border-box; box-sizing: border-box; }
   navigation__logo {
   position: relative;
   top: 10px;
@@ -110,20 +117,31 @@ div {
 }
 .page-footer {
   clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   text-align: center;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   padding: 20px;
 }
 .page-header__item {
-  flex: 0 1 200px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 200px;
+          flex: 0 1 200px;
 }
 .page-header__item:last-child {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   text-align: right;
 }
 .navigation-list {
@@ -134,22 +152,76 @@ div {
   margin-left: 15px;
 }
 .grid {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 300px 20px 300px 20px 300px;
   grid-template-columns: 300px 300px 300px;
+  -ms-grid-rows: 300px 20px 300px;
   grid-template-rows: 300px 300px;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
+}
+.grid > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+.grid > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+.grid > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+.grid > *:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+.grid > *:nth-child(5) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+.grid > *:nth-child(6) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+}
+.grid > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+.grid > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+.grid > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+.grid > *:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+.grid > *:nth-child(5) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+.grid > *:nth-child(6) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
 }
 .grid__item {
   background-color: lightgray;
 }
 @media all and (max-width: 500px) {
   .grid {
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
 }
 @media all and (min-width: 500px) and (max-width: 750px){
   .grid {
+    -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -180,17 +252,34 @@ div {
   border-radius: 3px;
   /* width of the border, type, color */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.2s opacity;
   transition: 0.2s opacity;
 }
 .animation {
  float:inherit;
 }
 .skyline {
-  animation-duration: 4s;
-  animation-name: color-change;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-name: color-change;
+          animation-name: color-change;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+@-webkit-keyframes color-change {
+  0% {
+    fill: #000000;
+  }
+  50% {
+    fill: #808B96;
+  }
+  100% {
+    fill: #CACFD2;
+  }
 }
 @keyframes color-change {
   0% {

@@ -39,7 +39,6 @@ Background Color (Green): #357b70;
       /* Sets the font size to 50px */
       line-height: 1.6;
       /* Sets the line-height to 1.6 */
-      text-align: center;
         }
     table{
         font-family: 'Libre Baskerville', sans-serif;
@@ -96,7 +95,6 @@ div {
   padding: 10px; /* Adds a 10px inner spacing to all sides*/
   margin: 10px; /* Adds a 10px outer spacing to all sides*/
   border: 1px; /* Attributes describe: thickness, type, color*/
-  text-align: center;
 }
  .profile__portrait {
   float:left;
@@ -257,7 +255,6 @@ div {
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   -webkit-transition: 0.2s opacity;
   transition: 0.2s opacity;
-  text-align: center;
 }
 .animation {
  float:inherit;
